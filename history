@@ -1,0 +1,43 @@
+    1  cd ~/Desktop/
+    2  rsync -aHxv /home/threeaims01/webapps/datacanspeak_marketing .
+    3  rsync -aHxv threeaims01@web385.webfaction.com:/home/threeaims01/webapps/datacanspeak_marketing .
+    4  cd datacanspeak_marketing/
+    5  ls
+    6  open index.old.html 
+    7  diff -u index.html  index.old.html 
+    8  git status
+    9  git init
+   10  git remote add origin git@github.com:thejimmyg/datacanspeak-site.git
+   11  git add .
+   12  git status
+   13  git rm --cached .well-known/acme-challenge/-p8QOsNfk32nIKacOdHjduygNDFC7DIDwNsdQDnSXTs .well-known/acme-challenge/
+   14  git rm --cached .well-known/acme-challenge/-p8QOsNfk32nIKacOdHjduygNDFC7DIDwNsdQDnSXTs -r .well-known/acme-challenge/
+   15  git status
+   16  open img/mylondon.old.png 
+   17  open img/mylondon.png 
+   18  mv img/mylondon.old.png  img/mylondon.gui.png
+   19  mv img/mylondon.gui.png  img/mylondon.old.png
+   20  git status
+   21  git commit -m "Current"
+   22  rm -r .git/
+   23  rm -rf .git/
+   24  git init
+   25  git checkout -b gh-pages
+   26  git add .
+   27  git rm --cached .well-known/acme-challenge/-p8QOsNfk32nIKacOdHjduygNDFC7DIDwNsdQDnSXTs -r .well-known/acme-challenge/
+   28  git status
+   29  git commit -m "Current"
+   30  git remote add origin git@github.com:thejimmyg/datacanspeak-site.git
+   31  git push origin gh-pages
+   32  ls ~/.ssh/
+   33  cat ~/.ssh/github_rsa.pub 
+   34  cat ~/.ssh/id_rsa.pub 
+   35  ssh-keygen -t rsa -b 4096 -C "james@jimmyg.org"
+   36  ssh-keygen -t rsa -b 4096 -C "james@jimmyg.org"
+   37  ls
+   38  mv jimmyg ~/.ssh
+   39  mv jimmyg.pub ~/.ssh
+   40  cat ~/.ssh/jimmyg.pub 
+   41  ssh-add ~/.ssh/jimmyg
+   42  git push origin gh-pages
+   43  history > history
